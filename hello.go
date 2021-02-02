@@ -23,7 +23,7 @@ func main() {
 		fmt.Fprint(res, "Finished sync request")
 	})
 
-	//Handle '/hello/golang' route
+	//Handle '/go/async' route
 	mux.HandleFunc("/go/async", func(res http.ResponseWriter, req *http.Request) {
 		for i := 0; i < 3; i++ {
 			go f("async",i)
