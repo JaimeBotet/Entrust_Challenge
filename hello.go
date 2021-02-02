@@ -15,7 +15,7 @@ func f(from string,i int) {
 func main() {
 	// create a new 'ServeMux'
 	mux := http.NewServeMux() 
-	//Handle '/' route
+	//Handle '/sync' route
 	mux.HandleFunc("/sync", func(res http.ResponseWriter, req *http.Request) {
 		for i := 0; i < 3; i++ {
 			f("sync", i)
